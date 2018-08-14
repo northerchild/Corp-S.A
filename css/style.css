@@ -1,6 +1,22 @@
-/*======================================
-        Basic Properties starts
-=========================================*/
+/*Globales*/
+/*Variables*/
+:root {
+    --white: #fff;
+    --red:#e63d31;
+    --skyblue:#00bfff;
+    --bg-t:transparent;
+    --t:all 0.5s ease-in;
+    --Border_w:2px solid #fff;
+    --border_w:1px solid #fff;
+    /*Var Social Network = sn_Iniciales_de_la_red*/
+    --sn_fa:#3A5795;
+    --sn_tw:#5EA9DD;
+    --sn_wd:#06c;
+    --sn_rd:#D70004;
+    --sn_lk:#0274B3;
+    --sn_cg:#00A478;
+}
+/*Fin Variables*/
 body
 {
     overflow-x: hidden;
@@ -27,83 +43,328 @@ body
 {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
   
-
-/*=======================================
-         Basic Properties Ends
-=========================================*/
+/*Fin Globales*/
   
 
 
-/*======================================
-           Navigation starts
-=========================================*/
-
+/*Navigation bar*/
 
 .navbar
 {
     padding: 24px 0px;     
-    border-bottom: none !important;
-    transition: all 0.5s ease-in-out;
+    border-bottom: none ;
+    transition: var(--t);
 }
 
 .navbar ul li a
 {
-    color: white !important;
+    color: var(--white);
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 1px; 
     font-size: 13px;
     transition: all 0.5s ease-in;
-    background: transparent !important;
+    background: var(--bg-t);
 }
 
 .navbar ul li a:hover, .navbar ul li a:focus
 {
-    color: deepskyblue !important;
-    background: none !important;
+    color: var(--skyblue) ;
+    background: none ;
 }
 
 .navbar-toggle
 {
-    border: 1px solid white !important;
-    color: white !important;
-    transition: all 0.5s ease-in;
+    border: var(--border_w);
+    color: var(--white);
+    transition: var(--t);
 }
 
 .icon-bar
 {
-    color: white !important;
-    background-color: white !important;
+    color: ;
+    background-color: var(--white);
 }
 .navbar-toggle:hover
 {
-    background-color: deepskyblue !important;
+    background-color: var(--skyblue);
 }
 
  
 .navbar-inverse .navbar-collapse
 {
-  border-color: transparent !important;  
+  border-color: var(--bg-t);  
        
 }
 
   
 .location
 {
-    border: 1px solid white;
+    border: var(--border_w);
     border-radius: 50px;
     
 }
 
 .navbar-inverse
 {
-    background-color: transparent !important;
+    background-color: var(--t);
 }  
 
+/*End Navigation bar*/
+
+/*Icon and Background*/
+ 
+.secondary
+{
+    background-color:#34495e;
+}
 
 
-/*======================================
-            Navigation Ends
-=========================================*/
+/**/
+
+.slider
+{
+    width: 100%;
+    height: 100vh;
+    background-image: url(..//img/slider.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--white);
+    
+    
+}
+
+.slider-overlay
+{
+    width: 100%;
+    height: 100%;
+    background:rgba(0,0,0,0.65);
+    position: relative;
+}
+
+
+.slider-content
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.icons .fa
+{
+    font-size: 35px;
+    margin-right: 7px;
+    
+}
+
+
+.cta-div
+{
+    margin-top: 30px;
+     
+}
+
+
+.btn1
+{
+    padding: 13px 18px;
+    background-color: var(--t);
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 13px;
+    border: var(--Border_w);
+    border-top-left-radius: 15px;
+    transition: var(--t);
+    margin-right: -6px;
+    
+}
+
+
+
+.btn1:hover
+{
+    text-decoration: none;
+    color: var(--white);
+    background-color: var(--skyblue);    
+}
+
+
+.btn2
+{
+    padding: 13px 18px;
+    background-color: transparent;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 13px;
+    border: var(--Border_w);
+    border-bottom-right-radius: 15px;
+    transition: var(--t);
+    margin-right:10px;
+}
+
+
+
+.btn2:hover
+{
+    text-decoration: none;
+    color: var(--white);
+    background-color: var(--red);  
+}
+
+.social-networks a.fa
+{
+    border: var(--border_w);
+    padding: 10px;
+    color: var(--white);
+    width: 35px;
+    height: 35px;
+    border-radius: 25px;
+    margin-right: 2px;
+    transition: var(--t);
+    
+}
+
+
+.social-networks a.fa-facebook:hover
+{
+    text-decoration: none;
+    background-color: var(--sn_fa);
+    border: var(--border_w);
+    
+}
+
+.social-networks a.fa-twitter:hover
+{
+    text-decoration: none;
+    background-color: var(--sn_tw);
+    border: var(--border_w);
+    
+}
+
+.social-networks a.fa-windows:hover
+{
+    text-decoration: none;
+    background-color: var(--sn_wd);
+    border: var(--border_w);
+    
+}
+
+.social-networks a.fa-reddit:hover
+{
+    text-decoration: none;
+    background-color: var(--sn_rd);
+    border: var(--border_w);
+    
+}
+
+.social-networks a.fa-linkedin:hover
+{
+    text-decoration: none;
+    background-color: var(--sn_lk);
+    border: var(--border_w);
+    
+}
+
+.social-networks a.fa-cog:hover
+{
+    text-decoration: none;
+    background-color: var(--sn_cg);
+    border: var(--border_w);
+    
+}
+ 
+.slider .text, .slider .typed-cursor
+{
+    display: inline;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+
+.primary
+{
+    color: orangered;
+}
+
+.typed-cursor
+{
+  opacity: 1;
+  animation: blink 0.7s infinite;
+  -webkit-animation:blink 0.7s infinite;
+  -mox-animation:blink 0.7s infinite;
+    
+    
+}
+
+@keyframes blink
+{
+    0%
+    {
+        opacity: 1;
+    }
+    
+    
+    50%
+    {
+        opacity: 0;
+    }
+    
+    100%
+    {
+        opacity: 1;
+    }
+    
+    
+    
+}
+
+@-webkit-keyframes blink
+{
+    0%
+    {
+        opacity: 1;
+    }
+    
+    
+    50%
+    {
+        opacity: 0;
+    }
+    
+    100%
+    {
+        opacity: 1;
+    }
+  
+}
+
+@-moz-keyframes blink
+{
+    0%
+    {
+        opacity: 1;
+    }
+    
+    
+    50%
+    {
+        opacity: 0;
+    }
+    
+    100%
+    {
+        opacity: 1;
+    }
+    
+  
+}  
+
+/*End Slider*/
